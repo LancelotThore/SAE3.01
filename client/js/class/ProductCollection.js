@@ -15,7 +15,7 @@ class ProductCollection {
         this.#uri = uri;
         let objects = await getRequest(uri);
         for(let item of objects){
-            let p = new Product(item.id, item.name, item.category);
+            let p = new Product(item.id_produit, item.nom, item.image, item.prix, item.id_categorie);
             this.#add(p);
         }
         return this.#products.length;
@@ -25,13 +25,14 @@ class ProductCollection {
     #add(p){
         if ( p instanceof Product) // prevent from adding object that are not Product instances
             this.#products.push(p);
+            console.log(this.#products);
     }
 
     async create(name, idcat){
         if (this.#uri == "" ){
             console.log("Warning, the api server uri is not set.");
         }
-        let object = await postRequest(this.#uri, {name: nom, category: id_categorie});
+        let object = await postRequest(this.#uri, {name: name, category: idcat});
         if (object){
             this.#add(new Product(object.id, object.name, object.category));
         }

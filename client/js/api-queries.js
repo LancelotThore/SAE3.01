@@ -93,4 +93,4 @@ let patchRequest = async function(uri, data){
    // Pas implémenté. TODO if needed.
 }
 
-export {getRequest}
+export {getRequest, postRequest};

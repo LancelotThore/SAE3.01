@@ -1,0 +1,33 @@
+$colors: (
+    primary: (
+        white: hsl(0 0% 100%),
+        black: hsl(0 0% 0%),
+        grey: hsl(0 0% 33.3%),
+        orange: hsl(39.5 100% 50%),
+    ),
+    neutral: (
+        red: hsl(0 89.4% 48%),
+        green: hsl(120 94.8% 37.5%),
+        light-blue: hsl(186 100% 38.2%),
+        blue: hsl(206 99% 40.4%),
+        hover-blue: hsl(186 100% 38.2% / 0.5)
+    )
+);
+
+$weigh: (
+    300: 300,
+    400: 400,
+    500: 500,
+    600: 600,
+    700: 700
+);
+
+$size : (
+    12px: .75rem,
+    14px: .88rem,
+    16px: 1rem,
+    21px: 1.31rem,
+    27px: 1.69rem,
+    36px: 2.25rem
+);
+

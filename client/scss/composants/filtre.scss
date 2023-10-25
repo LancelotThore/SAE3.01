@@ -1,0 +1,45 @@
+@use '../abstracts/' as *;
+
+//Filtre boutique
+
+.boutique-filtre {
+    @include flex();
+    margin-top: 3rem;
+    justify-content: space-evenly;
+    gap: 2em;
+    padding-right: 1em;
+
+    @media (max-width:67rem) {
+        flex-direction: column;
+    }
+
+    &__item {
+        @include flex();
+        background-color: var(--buttonlight-blue);
+        border-radius: 10px;
+        padding: .5rem 1rem;
+        gap: 1rem;
+    }
+
+    &__select {
+        color: var(--clr-primary-white);
+        background-color: var(--buttonlight-blue);
+        border-radius: 10px;
+    }
+
+}
+
+.search-bar {
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    border: solid 2px var(--border);
+    color: var(--clr-primary-black);
+    gap: 1rem;
+    background-color: var(--clr-primary-white);
+}
+
+@media (max-width:500px) {
+    .boutique-filtre__list {
+        flex-direction: column;
+    }
+}

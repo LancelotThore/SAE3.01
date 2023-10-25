@@ -1,0 +1,38 @@
+@use '../abstracts/' as *;
+
+// root
+  
+:root {
+    --ff-sans: "Open Sans", sans-serif;
+
+    @each $key, $value in $weigh{
+        #{'--wgh-' + $key}: #{$value};
+    }
+
+    @each $colors, $shade-map in $colors {
+        @each $shade, $value in $shade-map {
+            --clr-#{$colors}-#{$shade}: #{$value};
+        }
+    }
+
+    @each $key, $value in $size {
+        --size-#{$key}: #{$value};
+    }
+    
+    --description: var(--size-12px);
+    --condition: var(--size-14px);
+    --text: var(--size-16px);
+
+    --rubrique: var(--size-21px);
+    --subtitle: var(--size-27px);
+    --title: var(--size-36px);
+    --button: var(--size-21px);
+    --svg: var(--clr-primary-orange);
+    --buttonorange: var(--clr-primary-orange);
+    --buttonlight-blue: var(--clr-neutral-light-blue);
+    --textwhite: var(--clr-primary-white);
+    --textblack: var(--clr-primary-black);
+    --price: var(--clr-neutral-red);
+    --promo: var(--clr-neutral-green);
+    --border: var(--clr-neutral-light-blue);
+}

@@ -1,0 +1,147 @@
+@use '../abstracts/' as *;
+
+.footer {
+    @include flex;
+    flex-direction: row;
+    gap: 5rem;
+    padding-bottom: 2rem;
+
+    &__container {
+        background-color: var(--clr-neutral-light-blue);
+        padding: 2rem;
+
+    }
+
+    &__links {
+        @include flex;
+        //@include cursor;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+        list-style: disc;
+
+    }
+
+    &__links-li:hover {
+        text-decoration: underline;
+    }
+
+    &__links-li {
+        font-size: var(--rubrique);
+        color: var(--textwhite);
+
+    }
+
+    &__paiement-title {
+        font-size: var(--rubrique);
+        color: var(--textblack);
+
+    }
+
+    &__paiement-ul {
+        @include flex;
+        flex-direction: row;
+        gap: 1rem;
+
+    }
+
+    &__paiement-li {
+        width: 5rem;
+
+    }
+
+    &__reseaux-title {
+        font-size: var(--rubrique);
+        color: var(--textblack);
+
+    }
+
+    &__reseaux-ul {
+        @include flex;
+        flex-direction: row;
+        gap: 1rem;
+
+    }
+
+    &__reseaux-li {
+        //@include cursor;
+        width: 3rem;
+
+    }
+
+    &__reseaux-li:hover {
+        opacity: .75;
+    }
+
+    &__item {
+        @include flex;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: var(--clr-primary-white);
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+
+    &__newsletter {
+        @include flex;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: var(--clr-primary-white);
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+
+    &__newsletter-item {
+        @include flex;
+
+    }
+
+    &__newsletter-title {
+        font-size: var(--rubrique);
+        color: var(--textblack);
+
+    }
+
+    &__langue-li {
+        @include flex;
+        flex-direction: column;
+        width: 5rem;
+        gap: 1rem;
+        font-size: var(--rubrique);
+    }
+
+    &__langue-img {
+        //@include cursor;
+    }
+
+    &__langue-img:hover {
+        opacity: .75;
+    }
+
+    &__copyright {
+        @include flex;
+        margin-top: 1rem;
+        color: var(--textwhite);
+        padding-bottom: 1rem;
+
+
+    }
+
+    @media (max-width:67rem) {
+        & {
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        &__newsletter {
+            flex-direction: column;
+        }
+    }
+
+}
+
+.row {
+    @include flex;
+    flex-direction: row;
+    gap: 1rem;
+}

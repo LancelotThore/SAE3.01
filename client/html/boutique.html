@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Boutique</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="offre">
+            <h3 class="offre__text"><Span class="offre__text-bold">Livraison offerte</Span> dès 80€ d’achats* / <span
+                    class="offre__text-bold">Carte de fidélité :</span> 12 tampons = 25€ de bon d’achat</h3>
+        </div>
+        <div class="container">
+            <input type="checkbox" id="toggle" aria-label="Btn afficher ou pas le menu" />
+            <label for="toggle" class="label">
+                <svg viewBox="0 0 32 32" width="64" height="64">
+                    <rect class="burger__line" x="2" y="6" width="28" height="3" rx="2" fill="#FFF"></rect>
+                    <rect class="burger__line" x="2" y="15" width="28" height="3" rx="2" fill="#FFF"></rect>
+                    <rect class="burger__line" x="2" y="24" width="28" height="3" rx="2" fill="#FFF"></rect>
+                </svg>
+                <span class="sr-only">Btn afficher ou pas le menu</span>
+            </label>
+
+
+            <a href="./index.html"><img class="logo" src="../assets/manga-story.svg" alt=""></a>
+
+            <nav class="main-nav">
+                <ul class="main-nav__list">
+                    <li class="main-nav__item search-bar">
+                        <input type="search" name="search-accueil" placeholder="Rechercher...">
+                        <button class="pointer" type="submit" value="search-accueil"><img src="../assets/search.svg"
+                                alt=""></button>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="./boutique.html">Voir tous les produits</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <p class="main-nav__link">Mon compte</p>
+                    </li>
+                </ul>
+            </nav>
+
+            <figure class="panier">
+                <img class="panier__svg" src="../assets/panier.svg" alt="">
+                <span class="panier__articles">0</span>
+            </figure>
+
+        </div>
+    </header>
+
+    <ul class="boutique-filtre">
+        <li class="boutique-filtre__item search-bar">
+            <input type="search" name="search-accueil" placeholder="Rechercher...">
+            <button class="pointer" type="submit" value="search-accueil"><img src="../assets/search.svg"
+                    alt=""></button>
+        </li>
+        <li class="boutique-filtre__item">
+            <select class="boutique-filtre__select" name="Categories">
+                <option value="" selected disabled hidden>Catégories</option>
+                <option value="1">Figurine</option>
+                <option value="2">DVD/Blu-Ray</option>
+                <option value="3">Prêt à porter</option>
+            </select>
+            <button class="pointer" type="submit" value="select-boutique"><img src="../assets/select.svg"
+                    alt=""></button>
+
+        </li>
+        <li class="boutique-filtre__item">
+            <select class="boutique-filtre__select" name="Univers">
+                <option value="" selected disabled hidden>Univers</option>
+                <option value="1">Shonen</option>
+                <option value="2">Shojo</option>
+                <option value="3">Seinen</option>
+                <option value="4">Enfants & Jeunesses</option>
+            </select>
+            <button class="pointer" type="submit" value="select-boutique"><img src="../assets/select.svg"
+                    alt=""></button>
+        </li>
+    </ul>
+
+    <ul class="products content-produits">
+        
+    </ul>
+
+    <footer class="footer__container">
+        <ul class="footer">
+            <li>
+                <ul class="footer__links">
+                    <li class="footer__links-li">Contact</li>
+                    <li class="footer__links-li">Carte de fidélité</li>
+                    <li class="footer__links-li">Catalogues</li>
+                    <li class="footer__links-li">Meilleurs Ventes</li>
+                    <li class="footer__links-li">Paiement Sécurisé</li>
+                    <li class="footer__links-li"> CGU & Politique de confidentialité </li>
+                    <li class="footer__links-li"> Paramétrer les cookies</li>
+                </ul>
+            </li>
+
+            <li>
+                <div class="footer__item">
+                    <ul class="footer__newsletter">
+                        <p class="footer__newsletter-title">S’incrire à la newsletter</p>
+                        <li class="footer__newsletter-item search-bar">
+                            <input type="search" name="search-footer" placeholder="Rentrer un email...">
+                            <button class="pointer" type="submit" value="search-footer"><img
+                                    src="../assets/newsletter.svg" alt=""></button>
+                        </li>
+                    </ul>
+                    <ul class="row">
+                        <li class="footer__reseaux-li"> <img src="../assets/instagram.svg" alt=""></li>
+                        <li class="footer__reseaux-li"> <img src="../assets/twitter.svg" alt=""></li>
+                        <li class="footer__reseaux-li"> <img src="../assets/facebook.svg" alt=""></li>
+                    </ul>
+                    <p class="footer__reseaux-title">Rejoignez-nous</p>
+                </div>
+
+            </li>
+
+            <li>
+                <div class="footer__item">
+                    <ul class="row">
+                        <li class="footer__langue-li"><img class="footer__langue-img" src="../assets/flag_france.svg"
+                                alt="">
+                            <p>Francais</p>
+                        </li>
+                        <li class="footer__langue-li"><img class="footer__langue-img"
+                                src="../assets/flag_royaumeuni.svg" alt="">
+                            <p>Anglais</p>
+                        </li>
+
+                    </ul>
+                    <ul class="row">
+                        <li class="footer__paiement-li"> <img src="../assets/Visa.svg" alt=""></li>
+                        <li class="footer__paiement-li"><img src="../assets/cartebancaire.svg" alt=""></li>
+                        <li class="footer__paiement-li"><img src="../assets/paypal.svg" alt=""></li>
+                    </ul>
+                    <p class="footer__paiement-title">Paiement sécurisé</p>
+                </div>
+            </li>
+        </ul>
+        <p class="footer__copyright">Copyright © 2021 Manga Story Tous droits réservés. SARL - MANGA STORY Societe au
+            capital social de 60 000 € - RCS de Paris 749 947 941 - SIRET 3374994794100029</p>
+    </footer>
+
+    <template id="template-produit">
+        <li class="products__item">
+            <img class="products__item__img" src="../assets/{{image}}" alt="">
+            <h4 class="products__item__title">{{name}}</h4>
+            <ul class="products__price">
+                <li class="products__price-after">{{price}}</li>
+            </ul>
+            <button class="products__item__btn"><img class="svg-24px" src="../assets/panier.svg" alt=""> Ajouter au
+                panier</button>
+        </li>
+    </template>
+</body>
+
+<script src="../js/api-queries.js"></script>
+
+</html>

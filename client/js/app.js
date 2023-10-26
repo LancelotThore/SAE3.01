@@ -23,7 +23,6 @@ V.renderPage = function (data) {
 V.renderCat = function (data) {
     let nav = document.querySelector(".content-filtre-cat")
     nav.innerHTML = categoryRenderer(data);
-    nav = document.querySelector(".content-filtre-cat")
     nav.addEventListener("click", C.handlerClickNav);
 }
 
@@ -42,9 +41,15 @@ C.init = async function () {
 }
 
 C.handlerClickNav = function (ev) {
-    if (ev.target.tagName =="OPTION") {
-        let id = ev.target.dataset.id;
-        V.render(M.products.findByCategory(id));
+    if (ev.target.tagName=="SELECT") {
+        let selectedOption = ev.target.options[ev.target.selectedIndex];
+        let id = selectedOption.dataset.id;
+        if (id == 0) {
+            V.render(M.products.findAll());
+        }
+        else {
+            V.render(M.products.findByCategory(id));
+        }
     }
 }
 

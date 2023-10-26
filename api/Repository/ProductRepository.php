@@ -43,7 +43,7 @@ class ProductRepository extends EntityRepository {
         $p->setPrice($answer->prix);
         $p->setIdcategory($answer->id_categorie);
         $p->setDescription($answer->description);
-        $p->setDispo($answer->dispo);
+        $p->setQuantite($answer->quantite);
         $p->setEditeur($answer->editeur);
         $p->setType($answer->type);
         $p->setHauteur($answer->hauteur);
@@ -75,7 +75,7 @@ class ProductRepository extends EntityRepository {
             $p->setPrice($obj->prix);
             $p->setIdcategory($obj->id_categorie);
             $p->setDescription($obj->description);
-            $p->setDispo($obj->dispo);
+            $p->setQuantite($obj->quantite);
             $p->setEditeur($obj->editeur);
             $p->setType($obj->type);
             $p->setHauteur($obj->hauteur);
@@ -98,13 +98,13 @@ class ProductRepository extends EntityRepository {
     }
 
     public function save($product){
-        $requete = $this->cnx->prepare("insert into Product (nom, image, prix, id_categorie, description, dispo, editeur, type, hauteur, matiere, date, langue, sous_titre, support, duree, format_image, studio, auteur, genre, nombre_episode, marque) values (:name, :img, :price, :idcategory, :description, :dispo, :editeur, :type, :hauteur, :matiere, :date, :langue, :sous_titre, :support, :duree, :format_image, :studio, :auteur, :genre, :nombre_episode, :marque )");
+        $requete = $this->cnx->prepare("insert into Product (nom, image, prix, id_categorie, description, quantite, editeur, type, hauteur, matiere, date, langue, sous_titre, support, duree, format_image, studio, auteur, genre, nombre_episode, marque) values (:name, :img, :price, :idcategory, :description, :quantite, :editeur, :type, :hauteur, :matiere, :date, :langue, :sous_titre, :support, :duree, :format_image, :studio, :auteur, :genre, :nombre_episode, :marque )");
         $name = $product->getName();
         $image = $product->getImage();
         $price = $product->getPrice();
         $idcat = $product->getIdcategory();
         $description = $product->getDescription();
-        $dispo = $product->getDispo();
+        $quantite = $product->getQuantite();
         $editeur = $product->getEditeur();
         $type = $product->getType();
         $hauteur = $product->getHauteur();
@@ -124,7 +124,7 @@ class ProductRepository extends EntityRepository {
         $requete->bindParam(':img', $img );
         $requete->bindParam(':price', $price );
         $requete->bindParam(':description', $description);
-        $requete->bindParam(':dispo', $dispo);
+        $requete->bindParam(':quantite', $quantite);
         $requete->bindParam(':editeur', $editeur);
         $requete->bindParam(':type', $type);
         $requete->bindParam(':hauteur', $hauteur);

@@ -68,7 +68,7 @@ class Product implements JsonSerializable {
      *  
      */
     public function JsonSerialize(): mixed{
-        return ["id_produit" => $this->id, "nom" => $this->name, "image" => $this->img, "prix" => $this->price, "id_categorie" => $this->idcategory, "description" => $this->description, "dispo" => $this->dispo,"editeur" => $this->editeur,"type" => $this->type,"hauteur" => $this->hauteur,"matiere" => $this->matiere,"date" => $this->date,"langue" => $this->langue,"sous_titre" => $this->sous_titre,"support" => $this->support,"duree" => $this->duree,"format_image" => $this->format_image,"studio" => $this->studio,"auteur" => $this->auteur,"genre" => $this->genre,"nombre_episode" => $this->nombre_episode,"marque" => $this->marque
+        return ["id_produit" => $this->id, "nom" => $this->name, "image" => $this->img, "prix" => $this->price, "id_categorie" => $this->idcategory, "description" => $this->description, "quantite" => $this->quantite,"editeur" => $this->editeur,"type" => $this->type,"hauteur" => $this->hauteur,"matiere" => $this->matiere,"date" => $this->date,"langue" => $this->langue,"sous_titre" => $this->sous_titre,"support" => $this->support,"duree" => $this->duree,"format_image" => $this->format_image,"studio" => $this->studio,"auteur" => $this->auteur,"genre" => $this->genre,"nombre_episode" => $this->nombre_episode,"marque" => $this->marque
         ];
     }
 
@@ -182,9 +182,9 @@ class Product implements JsonSerializable {
     /**
      * Get the value of dispo
      */ 
-    public function getDispo()
+    public function getQuantite()
     {
-        return $this->dispo;
+        return $this->quantite;
     }
 
     /**
@@ -192,9 +192,9 @@ class Product implements JsonSerializable {
      *
      * @return  self
      */ 
-    public function setDispo($dispo)
+    public function setQuantite($quantite)
     {
-        $this->dispo = $dispo;
+        $this->quantite = $quantite;
 
         return $this;
     }

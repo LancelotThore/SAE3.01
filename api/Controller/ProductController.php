@@ -41,7 +41,7 @@ class ProductController extends Controller {
         $p->setPrice($obj->price);
         $p->setIdcategory($obj->category);
         $p->setDescription($obj->description);
-        $p->setDispo($obj->dispo);
+        $p->setDispo($obj->quantite);
         $p->setEditeur($obj->editeur);
         $p->setType($obj->type);
         $p->setHauteur($obj->hauteur);

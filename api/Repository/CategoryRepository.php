@@ -57,7 +57,7 @@ class CategoryRepository extends EntityRepository {
         return $res;
     }
 
-    public function save($product){
+    public function save($category){
         $requete = $this->cnx->prepare("insert into CATEGORIES (nom) values (:name)");
         $name = $category->getName();
         $requete->bindParam(':name', $name );

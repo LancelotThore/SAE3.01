@@ -6,16 +6,16 @@ let Product = class {
     #price;
     #idcategory;
     #description;
-    #dispo;
+    #quantite;
 
-    constructor(id_produit, nom, image, prix, id_categorie, description, dispo) {
+    constructor(id_produit, nom, image, prix, id_categorie, description, quantite) {
         this.#id = id_produit;
         this.#name = nom;
         this.#img = image;
         this.#price = prix;
         this.#idcategory = id_categorie;
         this.#description = description;
-        this.#dispo = dispo;
+        this.#quantite = quantite;
     }
 
     getId() {
@@ -42,8 +42,8 @@ let Product = class {
         return this.#description;
     }
 
-    getDispo() {
-        return this.#dispo;
+    getQuantite() {
+        return this.#quantite;
     }
 
 }

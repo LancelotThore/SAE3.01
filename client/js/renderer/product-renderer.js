@@ -47,7 +47,7 @@ let productRendererPage = function (data) {
                 html = html.replace("{{price}}", p.getPrice());
                 html = html.replace("{{idcategory}}", p.getIdCategory());    
                 html = html.replace("{{description}}", p.getDescription());
-                html = html.replace("{{dispo}}", p.getDispo());
+                html = html.replace("{{quantite}}", p.getQuantite());
             
             all += html;
         }

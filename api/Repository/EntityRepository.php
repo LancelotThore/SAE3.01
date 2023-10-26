@@ -22,7 +22,7 @@ abstract class EntityRepository {
 
     protected function __construct(){
         // Modifiez ici vos informations de BDD et de connexion
-        $this->cnx = new PDO("mysql:host=127.0.0.1;dbname=duthil3", "duthil3", "duthil3");
+        $this->cnx = new PDO("mysql:host=127.0.0.1;dbname=thore2", "thore2", "thore2");
     }
 
     /**

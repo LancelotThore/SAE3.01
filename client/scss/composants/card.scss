@@ -9,6 +9,7 @@
     width: 100%;
     flex-wrap: wrap;
     gap: 1.875rem;
+    margin: 2rem 0;
     
     &-promotion {
       @include flex();

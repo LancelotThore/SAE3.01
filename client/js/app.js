@@ -1,5 +1,5 @@
 import { ProductCollection } from "./class/ProductCollection.js";
-import { productRenderer } from "./renderer/product-renderer.js";
+import { productRenderer, productRendererPage } from "./renderer/product-renderer.js";
 import { CategoryCollection } from "./class/CategoryCollection.js";
 import { categoryRenderer } from "./renderer/category-renderer.js";
 
@@ -34,7 +34,8 @@ C.init = async function () {
     let cat = await M.categories.load("https://mmi.unilim.fr/~thore2/api/categories");
     console.log(nb + " products added in the ProductCollection");
     console.log(cat + " products added in the CategoryCollection");
-    V.renderProduct(M.products.findAll());
+    console.log(M.products);
+    V.render(M.products.findAll());
     V.renderCat(M.categories.findAll());
     let produit = document.querySelector(".content-produits");
     produit.addEventListener('click', C.handler_clickOnProduit);
@@ -43,7 +44,7 @@ C.init = async function () {
 C.handlerClickNav = function (ev) {
     if (ev.target.tagName =="OPTION") {
         let id = ev.target.dataset.id;
-        V.renderProduct(M.products.findByCategory(id));
+        V.render(M.products.findByCategory(id));
     }
 }
 

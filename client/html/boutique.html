@@ -59,11 +59,7 @@
                     alt=""></button>
         </li>
         <li class="boutique-filtre__item">
-            <select class="boutique-filtre__select" name="Categories">
-                <option value="" selected disabled hidden>Catégories</option>
-                <option value="1">Figurine</option>
-                <option value="2">DVD/Blu-Ray</option>
-                <option value="3">Prêt à porter</option>
+            <select class="boutique-filtre__select content-filtre-cat" name="Categories">
             </select>
             <button class="pointer" type="submit" value="select-boutique"><img src="../assets/select.svg"
                     alt=""></button>
@@ -156,6 +152,11 @@
             <button class="products__item__btn"><img class="svg-24px" src="../assets/panier.svg" alt=""> Ajouter au
                 panier</button>
         </li>
+    </template>
+
+    <template id="template-filtre-cat">
+        <option data-id="0" selected disabled hidden>Catégories</option>
+        <option data-id="{{id}}">{{name}}</option>
     </template>
 
     <script type="module" src="../js/app.js"></script>

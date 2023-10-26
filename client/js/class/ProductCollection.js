@@ -25,7 +25,6 @@ class ProductCollection {
     #add(p){
         if ( p instanceof Product) // prevent from adding object that are not Product instances
             this.#products.push(p);
-            console.log(this.#products);
     }
 
     async create(name, idcat){

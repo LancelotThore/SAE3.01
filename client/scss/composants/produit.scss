@@ -8,6 +8,7 @@
   
   
     &__title {
+      width: 100vw;
       color: var(--textwhite);
       font-size: var(--title);
       background-color: var(--clr-primary-orange);
@@ -29,13 +30,11 @@
         padding: 0;
       }
     }
-  
-  
-  
   }
 
-
-
+.pos-relative {
+  position: relative;
+}
 
 .produit {
     @include flex;
@@ -47,9 +46,9 @@
     &__img {
       object-fit: cover;
       width: 40rem;
+      height: 40rem;
       border-radius: 1rem;
       border: 2px solid var(--border);
-  
     }
   
     &__ul {
@@ -74,7 +73,8 @@
     &__prix {
       @include flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: .25rem;
+      padding: .15rem;
     }
   
     &__price {
@@ -86,8 +86,7 @@
     &__dispo {
       color: var(--clr-neutral-green);
       font-size: var(--price);
-  
-  
+      width: 2rem;
     }
   
     &__achat {
@@ -104,7 +103,7 @@
       padding: 1rem;
       color: var(--textwhite);
       font-size: var(--button);
-      border-radius: 0 1rem 1rem 0;
+      border-radius: 0 .5rem .5rem 0;
   
     }
   
@@ -154,12 +153,22 @@
       }
       
       &__btn{
-        border-radius: 0 0 1rem 1rem;
-  
+        border-radius: 0 0 .5rem .5rem;
+      }
+
+      &__prix {
+        flex-direction: row;
+        gap: 1rem;
+        padding: .5rem .5rem 0 .5rem;
       }
   
       &__options{
         flex-direction: column;
+      }
+
+      &__img {
+        width: 20rem;
+        height: 20rem;
       }
     }
   }

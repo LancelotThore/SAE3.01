@@ -2,6 +2,10 @@
 
 /* Produits en promotion */
 
+.none {
+  display: none;
+}
+
 .products {
     @include flex();
     padding: 0 2rem;
@@ -9,6 +13,26 @@
     width: 100%;
     flex-wrap: wrap;
     gap: 1.875rem;
+    margin: 2rem 0;
+
+    &__dispo {
+      position: absolute;
+      left: 0;
+      padding: .5rem;
+      color: var(--clr-primary-white);
+      border-radius: 13px 0;
+      font-weight: var(--wgh-600);
+
+      &-1 {
+        @extend .products__dispo;
+        background-color: var(--clr-primary-grey);
+      }
+
+      &-2 {
+        @extend .products__dispo;
+        background-color: var(--clr-primary-orange);
+      }
+    }
     
     &-promotion {
       @include flex();
@@ -45,6 +69,7 @@
   
     &__item {
       @include flex();
+      position: relative;
       width: 16rem;
       height: 27rem;
       flex-direction: column;

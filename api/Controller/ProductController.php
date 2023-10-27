@@ -40,6 +40,23 @@ class ProductController extends Controller {
         $p->setImage($obj->img);
         $p->setPrice($obj->price);
         $p->setIdcategory($obj->category);
+        $p->setDescription($obj->description);
+        $p->setQuantite($obj->quantite);
+        $p->setEditeur($obj->editeur);
+        $p->setType($obj->type);
+        $p->setHauteur($obj->hauteur);
+        $p->setMatiere($obj->matiere);
+        $p->setDate($obj->date);
+        $p->setLangue($obj->langue);
+        $p->setSous_titre($obj->sous_titre);
+        $p->setSupport($obj->support);
+        $p->setDuree($obj->duree);
+        $p->setFormat_image($obj->format_image);
+        $p->setStudio($obj->studio);
+        $p->setAuteur($obj->auteur);
+        $p->setGenre($obj->genre);
+        $p->setNombre_episode($obj->nombre_episode);
+        $p->setMarque($obj->marque);
         $ok = $this->products->save($p); 
         return $ok ? $p : false;
     }

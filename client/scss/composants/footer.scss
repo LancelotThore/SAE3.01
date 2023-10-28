@@ -9,17 +9,14 @@
     &__container {
         background-color: var(--clr-neutral-light-blue);
         padding: 2rem;
-
     }
 
     &__links {
         @include flex;
-        //@include cursor;
         flex-direction: column;
         gap: 1rem;
         align-items: flex-start;
         list-style: disc;
-
     }
 
     &__links-li:hover {
@@ -29,44 +26,36 @@
     &__links-li {
         font-size: var(--rubrique);
         color: var(--textwhite);
-
     }
 
     &__paiement-title {
         font-size: var(--rubrique);
         color: var(--textblack);
-
     }
 
     &__paiement-ul {
         @include flex;
         flex-direction: row;
         gap: 1rem;
-
     }
 
     &__paiement-li {
         width: 5rem;
-
     }
 
     &__reseaux-title {
         font-size: var(--rubrique);
         color: var(--textblack);
-
     }
 
     &__reseaux-ul {
         @include flex;
         flex-direction: row;
         gap: 1rem;
-
     }
 
     &__reseaux-li {
-        //@include cursor;
         width: 3rem;
-
     }
 
     &__reseaux-li:hover {
@@ -93,13 +82,11 @@
 
     &__newsletter-item {
         @include flex;
-
     }
 
     &__newsletter-title {
         font-size: var(--rubrique);
         color: var(--textblack);
-
     }
 
     &__langue-li {
@@ -108,10 +95,6 @@
         width: 5rem;
         gap: 1rem;
         font-size: var(--rubrique);
-    }
-
-    &__langue-img {
-        //@include cursor;
     }
 
     &__langue-img:hover {
@@ -123,8 +106,6 @@
         margin-top: 1rem;
         color: var(--textwhite);
         padding-bottom: 1rem;
-
-
     }
 
     @media (max-width:67rem) {
@@ -137,7 +118,6 @@
             flex-direction: column;
         }
     }
-
 }
 
 .row {

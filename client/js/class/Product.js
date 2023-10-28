@@ -5,13 +5,29 @@ let Product = class {
     #img;
     #price;
     #idcategory;
+    #description;
+    #quantite;
+    #taille_figurine;
+    #couleur_figurine;
+    #bluray;
+    #langue;
+    #taille_vetement;
+    #couleur_vetement;
 
-    constructor(id_produit, nom, image, prix, id_categorie) {
+    constructor(id_produit, nom, image, prix, id_categorie, description, quantite, taille_figurine, couleur_figurine, bluray, langue, taille_vetement, couleur_vetement) {
         this.#id = id_produit;
         this.#name = nom;
         this.#img = image;
         this.#price = prix;
         this.#idcategory = id_categorie;
+        this.#description = description;
+        this.#quantite = quantite;
+        this.#taille_figurine = taille_figurine;
+        this.#couleur_figurine = couleur_figurine;
+        this.#bluray = bluray;
+        this.#langue = langue;
+        this.#taille_vetement = taille_vetement;
+        this.#couleur_vetement = couleur_vetement;
     }
 
     getId() {
@@ -33,6 +49,51 @@ let Product = class {
     getIdCategory() {
         return this.#idcategory;
     }
+
+    getDescription() {
+        return this.#description;
+    }
+
+    getQuantite() {
+        return this.#quantite;
+    }
+    getTaille_figurine() {
+        return this.#taille_figurine;
+    }
+    getCouleur_figurine() {
+        return this.#couleur_figurine;
+    }
+    getBluray() {
+        return this.#bluray;
+    }
+    getLangue() {
+        return this.#langue;
+    }
+    getTaille_vetement() {
+        return this.#taille_vetement;
+    }
+    getCouleur_vetement() {
+        return this.#couleur_vetement;
+    }
+
+    getOption() {
+        let result = [];
+        if (this.#taille_figurine == "" & this.#couleur_figurine == "" & this.#bluray == "" & this.#langue == "") {
+            result.push("Taille", "Couleur", this.#taille_vetement, this.#couleur_vetement);
+
+        }
+        if (this.#taille_figurine == "" & this.#couleur_figurine == "" & this.#taille_vetement == "" & this.#couleur_vetement == "") {
+            result.push("Blu-ray", "Langue", this.#bluray, this.#langue);
+        }
+        if (this.#bluray == "" & this.#langue == "" & this.#taille_vetement == "" & this.#couleur_vetement == "") {
+            result.push("Taille", "Couleur", this.#taille_figurine, this.#couleur_figurine);
+        }
+        return result;
+    }
+
+
 }
+
+
 
 export {Product};

@@ -2,7 +2,6 @@ import { ProductCollection } from "./class/ProductCollection.js";
 import { productRenderer, productRendererPage, panierRenderer, dispoRender } from "./renderer/product-renderer.js";
 import { CategoryCollection } from "./class/CategoryCollection.js";
 import { categoryRenderer } from "./renderer/category-renderer.js";
-import
 
 let produit = document.querySelector(".content-produits");
 

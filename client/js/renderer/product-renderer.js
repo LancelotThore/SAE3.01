@@ -12,6 +12,12 @@ const templateCard = await getCard.text();
 let getPage = await fetch("../template/productpage.html.inc");
 const templatePage = await getPage.text();
 
+let getArticle = await fetch("../template/panierproduit.html.inc");
+const templateArticle = await getArticle.text();
+
+let getPanier = await fetch("../template/panierpage.html.inc");
+const templatePanier = await getPanier.text();
+
 document.querySelector('.content-produits').innerHTML;
 
 let productRenderer = function (data) {
@@ -73,7 +79,14 @@ let productRendererPage = async function (data) {
             html = html.replace("{{price}}", p.getPrice());
             html = html.replace("{{idcategory}}", p.getIdCategory());
             html = html.replace("{{description}}", p.getDescription());
-            html = html.replace("{{quantite}}", p.getQuantite());
+            html = html.replace("{{qtemax}}", p.getQuantite());
+
+            if (p.getQuantite() === "0") {
+                html = html.replace("{{value}}", 0);
+            }
+            else {
+                html = html.replace("{{value}}", 1)
+            }
 
             let options = p.getOption();
             let name = options.shift();
@@ -103,12 +116,43 @@ let productRendererPage = async function (data) {
                 i++;
 
             }
-            console.log(html);
             all += html;
         }
     }
-    console.log(all);
     return all;
+}
+
+let panierRenderer = function (data) {
+
+    let html = "";
+    let all = "";
+    let final = "";
+    
+    for (let p of data) {
+        let p2 = M.Product.find(p[0]);
+        if (p2 instanceof Array === false) {
+            console.error("data has be an array of Products");
+            return all;
+        }
+
+        if (p2 instanceof Product) {
+            html = templateArticle.replace("{{id}}", p2.getId());
+            html = html.replace("{{quantite}}", p[1]);
+            html = html.replace("{{name}}", p2.getName());
+            html = html.replace("{{image}}", p2.getImg());
+            html = html.replace("{{price}}", p2.getPrice());
+            html = html.replace("{{qtemax}}", p2.getQuantite());
+            html = html.replace("{{total}}", (p2.getPrice()*p[1]).toFixed(2));
+
+            all += html;
+
+            console.log(all);
+        }
+
+    }
+    final = templatePanier.replace("{{articles}}", all);
+    console.log(final);
+    return final;
 }
 
 let dispoRender = function() {
@@ -121,9 +165,9 @@ let dispoRender = function() {
             item.classList.add("products__dispo-2");
         }
         else {
-            item.classList.add(".none");
+            item.classList.add("none");
         }
     }
 }
 
-export { productRenderer, productRendererPage, dispoRender };
+export { productRenderer, productRendererPage, panierRenderer, dispoRender };

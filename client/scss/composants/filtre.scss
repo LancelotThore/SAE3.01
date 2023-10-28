@@ -1,7 +1,5 @@
 @use '../abstracts/' as *;
 
-//Filtre boutique
-
 .boutique-filtre {
     @include flex();
     margin-top: 3rem;
@@ -26,7 +24,6 @@
         background-color: var(--buttonlight-blue);
         border-radius: 10px;
     }
-
 }
 
 .search-bar {

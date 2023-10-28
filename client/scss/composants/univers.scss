@@ -1,60 +1,50 @@
 @use '../abstracts/' as *;
 
-/* Nos Univers */
-
-.univers {
-    @include flex();
-    flex-direction: column;
-    padding: 1.875rem 1rem;
-    gap: 1.875rem;
-    color: var(--clr-primary-white);
-    background-color: var(--clr-primary-orange);
-  
-    &__title {
-      font-size: var(--title);
-      font-weight: var(--wgh-600);
+ .univers {
+     @include flex();
+     flex-direction: column;
+     padding: 1.875rem 1rem;
+     gap: 1.875rem;
+     color: var(--clr-primary-white);
+     background-color: var(--clr-primary-orange);
+     &__title {
+         font-size: var(--title);
+         font-weight: var(--wgh-600);
     }
-    
-    &__items {
-      @include flex();
-      width: 100%;
-      flex-wrap: wrap;
-      gap: 1.875rem;
+     &__items {
+         @include flex();
+         width: 100%;
+         flex-wrap: wrap;
+         gap: 1.875rem;
     }
-
-    &__item {
-      @include flex();
-      flex-direction: column;
-      gap: 0.625rem;
-      cursor: pointer;
-  
-      &:hover {
-        opacity: .75;
-      }
-  
-      &__img {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-  
-      &__title {
-        font-size: var(--text);
-        font-weight: var(--wgh-400);
-        color: var(--clr-primary-white);
-      }
+     &__item {
+         @include flex();
+         flex-direction: column;
+         gap: 0.625rem;
+         cursor: pointer;
+         &:hover {
+             opacity: .75;
+        }
+         &__img {
+             width: 150px;
+             height: 150px;
+             border-radius: 50%;
+             object-fit: cover;
+        }
+         &__title {
+             font-size: var(--text);
+             font-weight: var(--wgh-400);
+             color: var(--clr-primary-white);
+        }
     }
-  
-    @media (min-width:67rem) {
-      & {
-        margin: 2rem;
-        border-radius: 50px;
-      }
-  
-      &__items {
-        justify-content: space-around;
-        gap: unset;
-      }
+     @media (min-width:67rem) {
+         & {
+             margin: 2rem;
+             border-radius: 50px;
+        }
+         &__items {
+             justify-content: space-around;
+             gap: unset;
+        }
     }
-  }
+}

@@ -511,9 +511,8 @@ input[type=checkbox]:checked ~ .main-nav {
   overflow: hidden;
 }
 
-/* Produits en promotion */
 .none {
-  display: none;
+  display: none !important;
   position: absolute;
 }
 
@@ -638,7 +637,6 @@ input[type=checkbox]:checked ~ .main-nav {
   background-color: var(--clr-neutral-green);
 }
 
-/* Nos Univers */
 .univers {
   display: flex;
   align-items: center;
@@ -863,7 +861,6 @@ input[type=checkbox]:checked ~ .main-nav {
   gap: 1rem;
 }
 
-/* Produit */
 .page {
   padding: 0 15rem;
 }
@@ -901,6 +898,9 @@ input[type=checkbox]:checked ~ .main-nav {
   margin: 0 3rem 0 3rem;
   max-width: 50rem;
 }
+.produit__qte {
+  max-width: 4rem;
+}
 .produit__img {
   object-fit: cover;
   width: 40rem;
@@ -912,7 +912,6 @@ input[type=checkbox]:checked ~ .main-nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  align-items: flex-start;
   flex-direction: column;
   gap: 1rem;
 }
@@ -963,6 +962,17 @@ input[type=checkbox]:checked ~ .main-nav {
   font-size: var(--button);
   border-radius: 0 0.5rem 0.5rem 0;
 }
+.produit__select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  color: var(--textwhite);
+  background-color: var(--buttonlight-blue);
+  height: 3em;
+  border-radius: 0.5rem;
+  max-width: 8rem;
+}
 .produit__select-item {
   display: flex;
   align-items: center;
@@ -971,16 +981,8 @@ input[type=checkbox]:checked ~ .main-nav {
   border-radius: 10px;
   padding: 0.3rem;
 }
-.produit__select {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 1rem;
-  color: var(--textwhite);
-  background-color: var(--buttonlight-blue);
-  width: 10rem;
-  height: 3em;
-  border-radius: 0.5rem;
+.produit__select__name {
+  font-size: 0.875rem;
 }
 .produit__options {
   display: flex;
@@ -1045,6 +1047,115 @@ input[type=checkbox]:checked ~ .main-nav {
     flex-direction: column;
     gap: 2rem;
   }
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+}
+.cart__td {
+  max-width: 10rem;
+}
+.cart__allproduit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.cart__allproduit-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: var(--clr-neutral-blue);
+  color: var(--textwhite);
+  padding: 1rem;
+  width: 100%;
+}
+.cart__allproduit-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+}
+.cart__produit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+}
+.cart__produit-img {
+  object-fit: cover;
+  width: 10rem;
+}
+.cart__produit-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 2rem;
+  width: 100%;
+  border: 2px solid var(--clr-neutral-light-blue);
+  border-top: none;
+}
+.cart__promo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  border: solid 2px var(--clr-neutral-light-blue);
+  padding: 1rem;
+}
+.cart__promo-ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+.cart__promo-input {
+  border: solid 1px var(--clr-neutral-light-blue);
+}
+.cart__promo-btn {
+  color: var(--textwhite);
+  background-color: var(--clr-neutral-light-blue);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.cart__reglement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: solid 2px var(--clr-neutral-light-blue);
+  padding: 1rem;
+  gap: 1rem;
+}
+.cart__reglement-img {
+  width: 5rem;
+}
+.cart__reglement-ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+.cart__reglement-input {
+  width: 1rem;
+  height: 1rem;
+  border: solid 1px var(--clr-neutral-light-blue);
 }
 
 .main {

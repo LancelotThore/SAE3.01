@@ -514,6 +514,7 @@ input[type=checkbox]:checked ~ .main-nav {
 /* Produits en promotion */
 .none {
   display: none;
+  position: absolute;
 }
 
 .products {

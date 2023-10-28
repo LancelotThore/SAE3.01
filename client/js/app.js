@@ -16,9 +16,8 @@ V.render = function (data) {
     dispoRender();
 }
 
-V.renderPage = function (data) {
-    console.log(data);
-    document.querySelector(".content-produits").innerHTML = productRendererPage(data);
+V.renderPage = async function (data) {
+    document.querySelector(".content-produits").innerHTML = await productRendererPage(data);
     dispoRender();
 }
 

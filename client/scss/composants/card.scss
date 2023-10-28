@@ -3,7 +3,8 @@
 /* Produits en promotion */
 
 .none {
-  display: none;
+  display: none !important;
+  position: absolute;
 }
 
 .products {

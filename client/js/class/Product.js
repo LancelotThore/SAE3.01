@@ -76,6 +76,24 @@ let Product = class {
         return this.#couleur_vetement;
     }
 
+    getOption() {
+        let result = [];
+        if (this.#taille_figurine == "" & this.#couleur_figurine == "" & this.#bluray == "" & this.#langue == "") {
+            result.push("Taille", "Couleur", this.#taille_vetement, this.#couleur_vetement);
+
+        }
+        if (this.#taille_figurine == "" & this.#couleur_figurine == "" & this.#taille_vetement == "" & this.#couleur_vetement == "") {
+            result.push("Blu-ray", "Langue", this.#bluray, this.#langue);
+        }
+        if (this.#bluray == "" & this.#langue == "" & this.#taille_vetement == "" & this.#couleur_vetement == "") {
+            result.push("Taille", "Couleur", this.#taille_figurine, this.#couleur_figurine);
+        }
+        return result;
+    }
+
+
 }
+
+
 
 export {Product};

@@ -21,7 +21,7 @@ class Category implements JsonSerializable {
      */ 
     public function getIdcategory(): int
     {
-        return $this->id;
+        return $this->idcategory;
     }
 
     /**

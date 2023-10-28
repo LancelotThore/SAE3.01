@@ -15,9 +15,9 @@ V.render = function (data) {
     document.querySelector(".content-produits").innerHTML = productRenderer(data);
 }
 
-V.renderPage = function (data) {
+V.renderPage = async function (data) {
     console.log(data);
-    document.querySelector(".content-produits").innerHTML = productRendererPage(data);
+    document.querySelector(".content-produits").innerHTML = await productRendererPage(data);
 }
 
 V.renderCat = function (data) {
@@ -56,7 +56,8 @@ C.handlerClickNav = function (ev) {
 C.handler_clickOnProduit = function(ev){
     if ( ev.target.tagName=="BUTTON"){
         let id = ev.target.dataset.id;
-        V.renderPage([M.products.find(id)]);
+        let i = M.products.find(id);
+        V.renderPage([i]);
     }
 }
 

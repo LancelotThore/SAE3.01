@@ -41,7 +41,7 @@ class ProductController extends Controller {
         $p->setPrice($obj->price);
         $p->setIdcategory($obj->category);
         $p->setDescription($obj->description);
-        $p->setDispo($obj->quantite);
+        $p->setQuantite($obj->quantite);
         $p->setEditeur($obj->editeur);
         $p->setType($obj->type);
         $p->setHauteur($obj->hauteur);
@@ -56,7 +56,7 @@ class ProductController extends Controller {
         $p->setAuteur($obj->auteur);
         $p->setGenre($obj->genre);
         $p->setNombre_episode($obj->nombre_episode);
-        $p->setMarque($obj->imarque);
+        $p->setMarque($obj->marque);
         $ok = $this->products->save($p); 
         return $ok ? $p : false;
     }

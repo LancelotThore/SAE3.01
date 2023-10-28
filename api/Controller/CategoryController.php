@@ -8,7 +8,7 @@ require_once "Repository/CategoryRepository.php" ;
 
 class CategoryController extends Controller {
 
-    private CategoryRepository $Categories;
+    private CategoryRepository $categories;
 
     public function __construct(){
         $this->categories = new CategoryRepository();
